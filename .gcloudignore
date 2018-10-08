@@ -1,0 +1,23 @@
+.gcloudignore
+.git
+.gitignore
+
+# Vim swap
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+
+# Emacs backup
+*~
+\#*\#
+.\#*
+
+# Other files
+/LICENSE
+/README.md
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+/.envrc
