@@ -13,5 +13,9 @@ $ gcloud beta functions deploy [function_name] \
 
 ## Environment variables
 
-- SLACK_TOKEN
-- SLACK_CHANNEL
+- SLACK_TOKEN (required)
+- SLACK_CHANNEL (required)
+- SLACK_USERNAME
+- SLACK_ICON_EMOJI
+- SLACK_ICON_URL
+- SLACK_MRKDWN
