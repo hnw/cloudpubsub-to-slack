@@ -4,6 +4,7 @@ import pprint
 import base64
 from slackclient import SlackClient
 
+
 def pubsub_to_slack(event, context):
     """Triggered from a message on a Cloud Pub/Sub topic.
     Args:
@@ -26,7 +27,7 @@ def pubsub_to_slack(event, context):
 
     sc = SlackClient(slack_token)
     pp = pprint.PrettyPrinter()
-    slack_text=pubsub_message
+    slack_text = pubsub_message
     if event['attributes']:
         slack_text = slack_text + "\n```\n" + pp.pformat(event['attributes']) + "\n```\n"
     sc.api_call(
@@ -35,5 +36,6 @@ def pubsub_to_slack(event, context):
         **opts
     )
 
+
 if __name__ == '__main__':
-    pubsub_to_slack({'data':'Zm9v', 'attributes':{'bar':'baz'}}, {})
+    pubsub_to_slack({'data': 'Zm9v', 'attributes': {'bar': 'baz'}}, {})
